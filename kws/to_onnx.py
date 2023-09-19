@@ -20,9 +20,17 @@ def main(conf: omegaconf.DictConfig) -> None:
         ckpt = torch.load(conf.init_weights, map_location="cpu")
         model.load_state_dict(ckpt["state_dict"])
 
+    features_params = conf.train_dataloader.dataset.transforms[0]
+
     torch.onnx.export(
         model,
-        args=(torch.randn(1, 64, 101),),
+        args=(
+            torch.randn(
+                1,
+                features_params.n_mels,
+                features_params.sample_rate // features_params.hop_length + 1,
+            ),
+        ),
         f="./data/kws.onnx",
         opset_version=14,
         input_names=["features"],
