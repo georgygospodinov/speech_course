@@ -22,12 +22,12 @@ class KWS(pl.LightningModule):
             task="multiclass", num_classes=conf.model.n_classes, top_k=1
         )
 
-        self.loss = torch.nn.NLLLoss()
+        self.loss = hydra.utils.instantiate(conf.loss)
 
     def forward(self, inputs: torch.Tensor) -> Tuple[torch.Tensor, torch.Tensor]:
-        logprobs = self.model(inputs)
-        preds = logprobs.argmax(1)
-        return logprobs, preds
+        logits = self.model(inputs)
+        preds = logits.argmax(1)
+        return logits, preds
 
     def on_train_start(self):
 
@@ -51,9 +51,9 @@ class KWS(pl.LightningModule):
     ):
         _, inputs, labels = batch
 
-        logprobs, preds = self.forward(inputs)
+        logits, preds = self.forward(inputs)
 
-        loss = self.loss(logprobs, labels)
+        loss = self.loss(logits, labels)
 
         log = {
             "train/loss": loss,
@@ -108,3 +108,46 @@ class KWS(pl.LightningModule):
             params=self.model.parameters(),
         )
         return {"optimizer": optimizer}
+
+
+class KDKWS(KWS):
+    def __init__(self, conf, teacher_weights):
+        super().__init__(conf)
+
+        self.teacher_model = hydra.utils.instantiate(conf.teacher_module.model)
+
+        ckpt = torch.load(teacher_weights, map_location="cpu")
+        self.teacher_model.load_state_dict({
+            k[len("model."):]: v for k,v in ckpt["state_dict"].items()
+            if "total" not in k
+        })
+        self.teacher_model.requires_grad_(False)
+        self.teacher_model.eval()
+
+        self.kd_loss = hydra.utils.instantiate(conf.teacher_module.kd_loss)
+        self.alpha = conf.teacher_module.kd_weight
+
+    def training_step(
+        self, batch: Tuple[torch.Tensor, torch.Tensor, torch.Tensor], batch_idx: int
+    ):
+        _, inputs, labels = batch
+
+        student_logits, preds = self.forward(inputs)
+        teacher_logits = self.teacher_model(inputs)
+
+        student_loss = self.loss(student_logits, labels)
+        kd_loss = self.kd_loss(student_logits, teacher_logits)
+
+        loss = (1 - self.alpha) * student_loss + self.alpha * kd_loss
+
+        log = {
+            "train/loss": student_loss,
+            "train/total_loss": loss,
+            "train/kd_loss": kd_loss,
+            "lr": self.optimizers().param_groups[0]["lr"],
+            "train/accuracy": self.train_acc(preds, labels),
+        }
+
+        self.log_dict(log, on_step=True)
+
+        return {"loss": loss}
