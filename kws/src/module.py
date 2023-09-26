@@ -1,9 +1,10 @@
-from typing import Tuple
+from collections.abc import Mapping
+from typing import Any, Tuple
 
 import hydra
 import pytorch_lightning as pl
-import torch
 import thop
+import torch
 from torchmetrics import Accuracy
 
 
@@ -23,6 +24,15 @@ class KWS(pl.LightningModule):
         )
 
         self.loss = hydra.utils.instantiate(conf.loss)
+
+    @staticmethod
+    def clean_state_dict(state_dict: Mapping[str, Any]) -> Mapping[str, Any]:
+        return {
+            k[len("model.") :]: v for k, v in state_dict.items() if "total" not in k
+        }
+
+    def load_state_dict(self, state_dict: Mapping[str, Any], **kwargs) -> None:
+        self.model.load_state_dict(self.clean_state_dict(state_dict), **kwargs)
 
     def forward(self, inputs: torch.Tensor) -> Tuple[torch.Tensor, torch.Tensor]:
         logits = self.model(inputs)
@@ -117,10 +127,7 @@ class KDKWS(KWS):
         self.teacher_model = hydra.utils.instantiate(conf.teacher_module.model)
 
         ckpt = torch.load(teacher_weights, map_location="cpu")
-        self.teacher_model.load_state_dict({
-            k[len("model."):]: v for k,v in ckpt["state_dict"].items()
-            if "total" not in k
-        })
+        self.teacher_model.load_state_dict(KWS.clean_state_dict(ckpt["state_dict"]))
         self.teacher_model.requires_grad_(False)
         self.teacher_model.eval()
 

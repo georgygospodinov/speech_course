@@ -55,7 +55,7 @@ teacher_module:
   kd_loss:
     _target_: torch.nn.MSELoss
 
-  kd_weightgt: 0.5 
+  kd_weight: 0.5 
 
 train_dataloader:
   _target_: torch.utils.data.DataLoader
@@ -80,6 +80,10 @@ train_dataloader:
         win_length: 400
         hop_length: 160
         n_mels: ${model.in_features}
+      - _target_: torchaudio.transforms.FrequencyMasking
+        freq_mask_param: 2
+      - _target_: torchaudio.transforms.TimeMasking
+        time_mask_param: 4
       - _target_: src.data.SpecScaler
 
 val_dataloader:

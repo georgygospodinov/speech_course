@@ -34,10 +34,10 @@ def main(conf: omegaconf.DictConfig) -> None:
         f="./data/kws.onnx",
         opset_version=14,
         input_names=["features"],
-        output_names=["logprobs", "predictions"],
+        output_names=["logits", "predictions"],
         dynamic_axes={
             "features": {0: "batch_size", 2: "time"},
-            "logprobs": {0: "batch_size"},
+            "logits": {0: "batch_size"},
             "predictions": {0: "batch_size"},
         },
     )
