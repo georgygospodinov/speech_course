@@ -1,6 +1,5 @@
 module:
   _target_: src.module.KWS
-init_weights: ./data/conv1d_epoch33_step25840.ckpt
 model:
   _target_: src.model.Conv1dNet
   in_features: 64
@@ -8,12 +7,24 @@ model:
   kernels:
     - 3
     - 3
+    - 3
+    - 3
+    - 3
+    - 3
   strides:
     - 2
-    - 2
+    - 1
+    - 1
+    - 1
+    - 1
+    - 1
   channels:
-    - 32
-    - 32
+    - 64
+    - 64
+    - 64
+    - 64
+    - 64
+    - 64
   hidden_size: 16
   activation:
     _target_: torch.nn.ReLU

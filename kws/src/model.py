@@ -48,7 +48,6 @@ class Conv1dNet(torch.nn.Module):
                 torch.nn.Linear(features, hidden_size),
                 activation,
                 torch.nn.Linear(hidden_size, n_classes),
-                torch.nn.LogSoftmax(-1),
             ]
         )
 
