@@ -1,0 +1,7 @@
+pytorch-lightning==1.9.4
+hydra-core==1.2.0
+editdistance
+torchaudio
+torch
+pandas
+tensorboard
