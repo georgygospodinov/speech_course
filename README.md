@@ -8,3 +8,4 @@
 | 2 | 12.09 | Основы обработки сигналов | [слайды](https://docs.google.com/presentation/d/1GRCp6yJeyNAwXD6uKcYvKZ759mg4NIriUGpTZCHCIQ0), [запись](https://youtu.be/kifdwZpBmkc), [colab](https://colab.research.google.com/github/georgygospodinov/speech_course/blob/main/week02/dsp_basics.ipynb) |
 | 3 | 19.09 | STFT, Keyword Spotting I | [слайды](https://docs.google.com/presentation/d/1BrZKWqVTDUfKYzQZU6KKJEIAkWuPZUPAVV_K39s2hnM/edit?usp=sharing), [запись](https://youtu.be/X-wEMzlwCRs), [семинар](./week03/spectrogram.ipynb), **[HW](./kws/)** |
 | 4 | 26.09 | Keyword Spotting II | [слайды](https://docs.google.com/presentation/d/1sP67ibqsOFCDBSOhcUKkynD4WbrNJ3w3onlR-5MURpo), [запись](https://youtu.be/yUIG2959o54), [семинар](./week04/) |
+| 5 | 03.10 | Распознавание речи: СTC, Beam-Search, Rescoring| [слайды](https://docs.google.com/presentation/d/1QxzEF5UQujgBgrDNinn_BbQNGDGNhr_AYXvWXASmU-w), запись, [семинар](./week05/seminar_notebook.ipynb), **[HW](./week05/HW.md)** |
