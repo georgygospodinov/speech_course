@@ -6,6 +6,7 @@ from torch import nn
 
 class ConvDecoder(nn.Module):
     def __init__(self, conf):
+
         super().__init__()
 
         self.labels = conf.labels
@@ -15,6 +16,7 @@ class ConvDecoder(nn.Module):
         )
 
     def forward(self, x: torch.Tensor) -> torch.Tensor:
+
         logits = self.layers(x)  # B x D x T
         logprobs = nn.functional.log_softmax(logits.transpose(1, 2), dim=-1)
 

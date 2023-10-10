@@ -12,20 +12,20 @@
 $ docker pull nvcr.io/nvidia/nemo:23.06
 $ docker run -it -v <repo_path>/asr/:/home/asr nvcr.io/nvidia/nemo:23.06
 $ cd /home/asr
-$ export CUDA_VISIBLE_DEVICES=1,2,3,4,5,6 && python main.py trainer.devices=6 trainer.accelerator=gpu ++trainer.strategy=ddp
+$ export CUDA_VISIBLE_DEVICES=1,2,3,4,5,6 && python run_quartznet_ctc.py trainer.devices=6 trainer.accelerator=gpu ++trainer.strategy=ddp
 ```
 
 Что требуется сделать:
 * Перейти в `<repo_path>/asr`, где написана большая часть кода для обучения
 * скачать [данные](https://drive.google.com/file/d/1TEOR60JXgOkPrC6jSLhuR2Nb6eCegjpd/view?usp=sharing) (можно скачать с помощью `download_data.sh`) и распоковать их в `./data`
-* разобраться в коде `main.py` и `src/*.py`
-* реализовать классы в [`src/encoder.py`](../asr/src/encoder.py)
+* разобраться в коде `run_quartznet_ctc.py` и `src/*.py`
+* реализовать классы в [`src/encoder/quartznet.py`](../asr/src/encoder/quartznet.py)
 * проверить, что у реализованного энкодера число параметров совпадает со значением в статье:
 ```python
 sum(p.numel() for p in model.encoder.parameters())
 6708096
 ```
-* запустить обучение: `python main.py`
+* запустить обучение: `python run_quartznet_ctc.py`
 * увидеть подобное в логе:
 ```log
   | Name     | Type        | Params
@@ -42,7 +42,7 @@ sum(p.numel() for p in model.encoder.parameters())
 [2023-10-03 13:00:07,101][lightning][INFO] - reference : салют хватит
 [2023-10-03 13:00:07,101][lightning][INFO] - prediction: й
 ```
-* запустить обучение с предобученного чекпоинта: `python main.py model.init_weights=<absolute_path>/data/q5x5_ru_stride_4_crowd_epoch_4_step_9794.ckpt`
+* запустить обучение с предобученного чекпоинта: `python run_quartznet_ctc.py model.init_weights=<absolute_path>/data/q5x5_ru_stride_4_crowd_epoch_4_step_9794.ckpt`
 * увидеть подобное в логе: 
 ```log
 [2023-10-03 12:58:59,306][lightning][INFO] - reference : салют вызов светлане васильевне николенко
