@@ -15,8 +15,6 @@ class ASRDataset(torch.utils.data.Dataset):
         self.transform = get_transform(conf.transforms)
 
         manifest_path = Path(__file__).parent.parent / "data" / conf.manifest_name
-        print("-" * 50)
-        print("manifest_path", manifest_path)
 
         manifest = pd.read_json(manifest_path, lines=True)
 
