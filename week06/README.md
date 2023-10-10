@@ -1,0 +1,1 @@
+Ссылка для скачивания токенизатора и las-чекпоинта: https://disk.yandex.ru/d/cHwlEWCrTtpqxQ
