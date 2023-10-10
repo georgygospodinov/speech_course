@@ -1,6 +1,5 @@
 model:
-  _target_: src.models.conformer_las.ConformerLAS
-  # init_weights: null
+  init_weights: null
 
   encoder:
     dropout: 0.0
@@ -19,7 +18,7 @@ model:
     embedding_dim: 256
     n_layers: 2
     dropout: 0.0
-    tokenizer: /home/malex26/repos/my_fork/speech_course/asr/data/tokenizer/bpe_1024_bos_eos.model
+    tokenizer: 
 
 optim:
   optimizer:
