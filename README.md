@@ -10,3 +10,4 @@
 | 4 | 26.09 | Keyword Spotting II | [слайды](https://docs.google.com/presentation/d/1sP67ibqsOFCDBSOhcUKkynD4WbrNJ3w3onlR-5MURpo), [запись](https://youtu.be/yUIG2959o54), [семинар](./week04/) |
 | 5 | 03.10 | Распознавание речи: СTC, Beam-Search, Rescoring| [слайды](https://docs.google.com/presentation/d/1QxzEF5UQujgBgrDNinn_BbQNGDGNhr_AYXvWXASmU-w), [запись](https://youtu.be/LvZEyabIH20), [семинар](./week05/seminar_notebook.ipynb), **[HW](./week05/HW.md)** |
 | 6 | 10.10 | Распознавание речи: Streaming, RNN-T, LAS | [слайды](https://docs.google.com/presentation/d/1YFR5M3TL-KJY1jANiYbZ67gC3SDQaaPnQKJ8UbwdDfo/edit?usp=sharing), [запись](https://youtu.be/lnaCmt4hKjY), [семинар](./week06/conformer_las.ipynb) |
+| 7 | 17.10 | Распознавание речи: Self-Supervised Learning, System Combination | [слайды](https://docs.google.com/presentation/d/1ZaPxpG11BHDJtywA7OwNEoGzoIl_cQ3u8Z1Wcvbr6s4/edit?usp=sharing), [запись](https://youtu.be/g5T1w3lmQx4), **[HW](./week07/HW.md)** |
