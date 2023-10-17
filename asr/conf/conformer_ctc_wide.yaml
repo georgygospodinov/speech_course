@@ -1,0 +1,75 @@
+model:
+
+  init_weights: null
+  labels: [ " ", "а", "б", "в", "г", "д", "е", "ж", "з", "и", "й", "к", "л", "м", "н", "о", "п", "р", "с", "т", "у", "ф", "х", "ц", "ч", "ш", "щ", "ъ", "ы", "ь", "э", "ю", "я" ]
+
+  encoder:
+    dropout: 0.0
+    feat_in: 64
+    stride: 4
+    d_model: 320
+    n_layers: 8
+    n_heads: 8
+    ff_exp_factor: 2
+    kernel_size: 15
+    
+
+  decoder:
+    feat_in: ${model.encoder.d_model}
+    labels: ${model.labels}
+
+optim:
+  optimizer:
+    name: 
+      Adam
+    params:
+      lr: 1e-3
+  scheduler:
+    name:
+      CosineAnnealing
+    params:
+      warmup_steps: 100
+      max_steps: ${trainer.max_steps}
+
+
+train_dataloader:
+  num_workers: 1
+  batch_size: 4
+  prefetch_factor: 1
+  dataset:
+    manifest_name: train_opus/manifest.jsonl
+    max_duration: 16.7
+    min_duration: 0.1
+    max_len: 68
+    labels: ${model.labels}
+    transforms:
+      - name: mel_spectrogram
+        params:
+          sample_rate: 16000
+          n_fft: 400
+          win_length: 400
+          hop_length: 160
+          n_mels: ${model.encoder.feat_in}
+      - name: log_scaler
+
+val_dataloader:
+  num_workers: ${train_dataloader.num_workers}
+  batch_size: ${train_dataloader.batch_size}
+  prefetch_factor: ${train_dataloader.prefetch_factor}
+  dataset:
+    manifest_name: test_opus/crowd/manifest.jsonl
+    labels: ${model.labels}
+    transforms:
+      ${train_dataloader.dataset.transforms}
+
+trainer:
+  resume_from_checkpoint: null
+  val_check_interval: 0.1
+  check_val_every_n_epoch: 1
+  log_every_n_steps: 5
+  precision: 32
+  accumulate_grad_batches: 1
+  gradient_clip_val: 1.0
+  accelerator: auto
+  max_steps: 30000
+  devices: 1
