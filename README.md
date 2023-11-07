@@ -12,3 +12,5 @@
 | 6 | 10.10 | Распознавание речи: Streaming, RNN-T, LAS | [слайды](https://docs.google.com/presentation/d/1YFR5M3TL-KJY1jANiYbZ67gC3SDQaaPnQKJ8UbwdDfo/edit?usp=sharing), [запись](https://youtu.be/lnaCmt4hKjY), [семинар](./week06/conformer_las.ipynb) |
 | 7 | 17.10 | Распознавание речи: Self-Supervised Learning, System Combination | [слайды](https://docs.google.com/presentation/d/1ZaPxpG11BHDJtywA7OwNEoGzoIl_cQ3u8Z1Wcvbr6s4/edit?usp=sharing), [запись](https://youtu.be/g5T1w3lmQx4), **[HW](./week07/HW.md)** |
 | 8 | 24.10 | Распознавание речи: Semi-Supervised Learning, mWER | [слайды](./week08/l8_asr_semi_supervised.pdf), [запись](https://youtu.be/Xv_s72oSku8), **[HW](https://colab.research.google.com/drive/19DXSYuoD8v3ocE_NZKPpuqBqZqYHuOu9?usp=sharing)** |
+| 9 | 31.10 | Распознавание речи: данные | WIP  |
+| 10 | 07.11 | Speaker Recognition | [слайды](https://docs.google.com/presentation/d/1hVbDMEdEGObtzkv-21RYJGW0VLIB4mFUyqZ2AP4tF7k/edit?usp=sharing), [запись](https://youtu.be/YxLzmvXc8us), [семинар](./week10/visualize.ipynb) |
