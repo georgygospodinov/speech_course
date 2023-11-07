@@ -3,3 +3,4 @@ lightning_logs
 outputs
 .DS_Store
 submit.csv
+.ipynb_checkpoints
