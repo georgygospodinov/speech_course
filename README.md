@@ -14,4 +14,4 @@
 | 8 | 24.10 | Распознавание речи: Semi-Supervised Learning, mWER | [слайды](./week08/l8_asr_semi_supervised.pdf), [запись](https://youtu.be/Xv_s72oSku8), **[HW](https://colab.research.google.com/drive/19DXSYuoD8v3ocE_NZKPpuqBqZqYHuOu9?usp=sharing)** |
 | 9 | 31.10 | Распознавание речи: данные | WIP  |
 | 10 | 07.11 | Speaker Recognition | [слайды](https://docs.google.com/presentation/d/1hVbDMEdEGObtzkv-21RYJGW0VLIB4mFUyqZ2AP4tF7k/edit?usp=sharing), [запись](https://youtu.be/YxLzmvXc8us), [семинар](./week10/visualize.ipynb) |
-| 11 | 14.11 | Speaker Diarization, Voice Activity Detection | [слайды](./week11/l11_diarization_vad.pdf), [запись](https://youtu.be/PzaQ-S4hvAQ), семинар |
+| 11 | 14.11 | Speaker Diarization, Voice Activity Detection | [слайды](./week11/l11_diarization_vad.pdf), [запись](https://youtu.be/PzaQ-S4hvAQ), [семинар](./week11/segmenting_model_finetune.ipynb) |
