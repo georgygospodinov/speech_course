@@ -17,3 +17,4 @@
 | 11 | 14.11 | Speaker Diarization, Voice Activity Detection | [слайды](./week11/l11_diarization_vad.pdf), [запись](https://youtu.be/PzaQ-S4hvAQ), [семинар](./week11/segmenting_model_finetune.ipynb) |
 | 12 | 21.11 | Синтез речи: характеристики звучащей речи, метрики качества | [слайды](./week12/l12_tts_intro_metrics.pdf), [запись](https://youtu.be/RiNj--KvqF8), [семинар](./week12/seminar.ipynb) |
 | 13 | 28.11 | Синтез речи: акустические модели, Tacotron2 | [слайды](./week13/l13_tts_am_taco.pdf), [запись](https://youtu.be/DgPLZ_aqKeI), [семинар](./week13/seminar.ipynb) |
+| 14 | 05.12 | Синтез речи: вокодеры | [слайды](./week14/l14_tts_vocoders.pdf), [запись](https://youtu.be/XvNlfuldHv0), **[HW](./week14/HW.md)** |
