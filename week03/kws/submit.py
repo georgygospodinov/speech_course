@@ -19,7 +19,9 @@ def main(conf: omegaconf.DictConfig) -> None:
     module = KWS(conf)
     if conf.init_weights:
         ckpt = torch.load(conf.init_weights, map_location="cpu")
-        module.load_state_dict(ckpt["state_dict"])
+        module.load_state_dict(
+            {k: v for k, v in ckpt["state_dict"].items() if "total" not in k}
+        )
 
     logger = hydra.utils.instantiate(conf.logger)
     trainer = hydra.utils.instantiate(conf.trainer, logger=logger)
