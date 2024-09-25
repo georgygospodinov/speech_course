@@ -1,0 +1,10 @@
+pytorch-lightning==2.0.9
+hydra-core==1.2.0
+torch==1.13.0
+torchaudio==0.13.0
+numpy<2.0
+pandas
+tensorboard
+six
+netron
+thop
