@@ -23,26 +23,26 @@ $ export CUDA_VISIBLE_DEVICES=1,2,3,4,5,6 && python run_quartznet_ctc.py trainer
 * проверить, что у реализованного энкодера число параметров совпадает со значением в статье:
 ```python
 sum(p.numel() for p in model.encoder.parameters())
-10051220
+11266850
 ```
 * запустить обучение: `python train_model.py --config-name ebranchformer_ctc`
 * увидеть подобное в логе:
 ```log
-  | Name     | Type        | Params
------------------------------------------
-0 | encoder  | QuartzNet   | 6.7 M 
-1 | decoder  | ConvDecoder | 34.9 K
-2 | wer      | WER         | 0     
-3 | ctc_loss | CTCLoss     | 0     
------------------------------------------
-6.7 M     Trainable params
-0         Non-trainable params
-6.7 M     Total params
-26.972    Total estimated model params size (MB)
+  | Name     | Type                 | Params
+--------------------------------------------------
+0 | encoder  | EBranchformerEncoder | 11.3 M
+1 | decoder  | ConvDecoder          | 8.7 K 
+2 | wer      | WER                  | 0     
+3 | ctc_loss | CTCLoss              | 0     
+--------------------------------------------------
+10.0 M    Trainable params
+1.3 M     Non-trainable params
+11.3 M    Total params
+45.067    Total estimated model params size (MB)
 [2023-10-03 13:00:07,101][lightning][INFO] - reference : салют хватит
 [2023-10-03 13:00:07,101][lightning][INFO] - prediction: й
 ```
-* запустить обучение с предобученного чекпоинта: `python run_quartznet_ctc.py model.init_weights=<absolute_path>/data/q5x5_ru_stride_4_crowd_epoch_4_step_9794.ckpt`
+* запустить обучение с предобученного чекпоинта: `python train_model.py model.init_weights=<absolute_path>/data/q5x5_ru_stride_4_crowd_epoch_4_step_9794.ckpt`
 * увидеть подобное в логе: 
 ```log
 [2023-10-03 12:58:59,306][lightning][INFO] - reference : салют вызов светлане васильевне николенко
