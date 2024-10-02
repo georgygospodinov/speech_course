@@ -1,4 +1,4 @@
-init_weights: /raid0/malex26/repos/speech_course/asr/outputs/2024-10-01/21-03-47/logs/lightning_logs/version_0/checkpoints/last_ckpt.ckpt
+init_weights: null
 
 model:
   model_class: 'ctc_model'
