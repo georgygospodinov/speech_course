@@ -3,7 +3,7 @@
 в этом домашнем задании предлагается имплементировать E-Branchformer Encoder из статьи:
 [E-BRANCHFORMER: BRANCHFORMER WITH ENHANCED MERGING FOR SPEECH RECOGNITION](https://arxiv.org/pdf/2210.00077)
 
-вам понадобятся данные и предобученный чекпоинт: [farfield-golos(~3Gb)](https://drive.google.com/file/d/1TEOR60JXgOkPrC6jSLhuR2Nb6eCegjpd/view?usp=sharing)
+вам понадобятся данные и предобученный чекпоинт: [farfield-golos(~3Gb)](https://drive.google.com/file/d/1iQd89RCOuGryVoDzyWCnSulaj4kcm-I8/view?usp=sharing)
 
 
 
@@ -17,7 +17,7 @@ $ export CUDA_VISIBLE_DEVICES=1,2,3,4,5,6 && python run_quartznet_ctc.py trainer
 
 Что требуется сделать:
 * Перейти в `<repo_path>/asr`, где написана большая часть кода для обучения
-* скачать [данные](https://drive.google.com/file/d/1TEOR60JXgOkPrC6jSLhuR2Nb6eCegjpd/view?usp=sharing) (можно скачать с помощью `download_data.py`) и распоковать их в `./data`
+* скачать [данные](https://drive.google.com/file/d/1iQd89RCOuGryVoDzyWCnSulaj4kcm-I8/view?usp=sharing) (можно скачать с помощью `download_data.py`) и распоковать их в `./data`
 * разобраться в коде в `train_model.py` и в `src/`
 * реализовать классы в [`src/encoders/e_branchformer.py`](../asr/src/encoders/e_branchformer.py)
 * проверить, что у реализованного энкодера число параметров совпадает со значением в статье:
@@ -42,7 +42,7 @@ sum(p.numel() for p in model.encoder.parameters())
 [2023-10-03 13:00:07,101][lightning][INFO] - reference : салют хватит
 [2023-10-03 13:00:07,101][lightning][INFO] - prediction: й
 ```
-* запустить обучение с предобученного чекпоинта: `python train_model.py model.init_weights=<absolute_path>/data/q5x5_ru_stride_4_crowd_epoch_4_step_9794.ckpt`
+* запустить обучение с предобученного чекпоинта: `python train_model.py --config-name ebranchformer_ctc init_weights=<absolute_path>/data/checkpoints_and_tokenizer/ebranchformer_ckpt.ckpt`
 * увидеть подобное в логе: 
 ```log
 [2023-10-03 12:58:59,306][lightning][INFO] - reference : салют вызов светлане васильевне николенко
@@ -51,6 +51,6 @@ sum(p.numel() for p in model.encoder.parameters())
 [2023-10-03 12:58:59,344][lightning][INFO] - prediction: джой званот юрию ивановичу зарькова
 ```
 
-* посчитать Word Error Rate на датасетах `./data/test_opus/crowd/manifest.jsonl` и `./data/test_opus/farfield/manifest.jsonl` с помощью предобученного чекпоинта: `./data/q5x5_ru_stride_4_crowd_epoch_4_step_9794.ckpt`
+* посчитать Word Error Rate на датасетах `./data/test_opus/crowd/manifest.jsonl` и `./data/test_opus/farfield/manifest.jsonl` с помощью предобученного чекпоинта: `./data/checkpoints_and_tokenizer/ebranchformer_ckpt.ckpt`
 * если у вас есть gpu, с помощью датасета `./data/train_opus/manifest.jsonl` и предобученного чекпоинта улучшить качество модели на `test_opus/farfield`-данных
 * если у вас нет gpu, взять случайный семпл в 10 минут (~ 100 примеров) из `./data/train_opus/manifest.jsonl` и показать, что со случайных весов модель способна на нем переобучиться
