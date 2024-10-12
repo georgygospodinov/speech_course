@@ -52,7 +52,7 @@ class ASRDatasetBPE(torch.utils.data.Dataset):
         super().__init__()
 
         self.transform = get_transform(conf.transforms)
-        self.tokenizer = sentencepiece.SentencePieceProcessor(model_file=conf.tokenizer)
+        self.tokenizer = sentencepiece.SentencePieceProcessor(model_file=conf.tokenizer_path)
 
         manifest_path = Path(__file__).parent.parent / "data" / conf.manifest_name
 
