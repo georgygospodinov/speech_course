@@ -5,19 +5,12 @@ import omegaconf
 import torch
 import pytorch_lightning as pl
 
-<<<<<<< HEAD
-from src.models import CTCModel
-=======
 from src.models import CTCModel, LASModel
->>>>>>> week4_seminar
 
 
 MODEL_CLASSES = {
     "ctc_model": CTCModel,
-<<<<<<< HEAD
-=======
     "las_model": LASModel,
->>>>>>> week4_seminar
 }
 
 
@@ -34,13 +27,7 @@ def main(conf: omegaconf.DictConfig) -> None:
 
     if conf.get("init_weights", False):
         ckpt = torch.load(conf.init_weights, map_location="cpu")
-<<<<<<< HEAD
-        if 'state_dict' in ckpt:
-            ckpt = ckpt["state_dict"]
-        model.load_state_dict(ckpt)
-=======
         model.load_state_dict(ckpt["state_dict"])
->>>>>>> week4_seminar
         logging.getLogger("lightning").info("successful load initial weights")
 
     trainer = pl.Trainer(
