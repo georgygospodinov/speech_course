@@ -22,7 +22,7 @@ $ export CUDA_VISIBLE_DEVICES=1,2,3,4,5,6 && python run_quartznet_ctc.py trainer
 * реализовать классы в [`src/encoders/e_branchformer.py`](../asr/src/encoders/e_branchformer.py)
 * проверить, что у реализованного энкодера число параметров совпадает со значением в статье:
 ```python
-sum(p.numel() for p in model.encoder.parameters())
+sum(p.numel() for p in model.parameters())
 11266850
 ```
 * запустить обучение: `python train_model.py --config-name ebranchformer_ctc`
