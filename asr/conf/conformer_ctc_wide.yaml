@@ -31,18 +31,18 @@ optim:
     name:
       CosineAnnealing
     params:
-      warmup_steps: 100
+      warmup_steps: 1000
       max_steps: ${trainer.max_steps}
 
 
 train_dataloader:
   num_workers: 1
-  batch_size: 4
+  batch_size: 64
   prefetch_factor: 1
   dataset:
     manifest_name: train_opus/manifest.jsonl
     max_duration: 16.7
-    min_duration: 0.1
+    min_duration: 1.0
     max_len: 68
     labels: ${model.labels}
     transforms:
@@ -52,7 +52,7 @@ train_dataloader:
           n_fft: 400
           win_length: 400
           hop_length: 160
-          n_mels: ${model.encoder.feat_in}
+          n_mels: ${model.encoder.features_num}
       - name: log_scaler
 
 val_dataloader:
@@ -66,10 +66,8 @@ val_dataloader:
       ${train_dataloader.dataset.transforms}
 
 trainer:
-  resume_from_checkpoint: null
-  val_check_interval: 0.1
-  check_val_every_n_epoch: 1
-  log_every_n_steps: 5
+  check_val_every_n_epoch: 2
+  log_every_n_steps: 1000
   precision: 32
   accumulate_grad_batches: 1
   gradient_clip_val: 1.0
