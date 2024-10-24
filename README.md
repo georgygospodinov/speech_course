@@ -9,7 +9,8 @@ MIPT, autumn 2024
 | 3 | 25.09 | Keyword Spotting | [slides](https://docs.google.com/presentation/d/1G1QaEsOaXVMaQkdYE9EQO8rXxbQLsFOxrHpDLLTjrok), [recording](https://youtu.be/zWeEctvTyzA), [seminar](./week03/), **[HW](./week03/kws/)** |
 | 4 | 02.10 | Speech Recognition: CTC, Beam Search, Rescoring | [slides](https://docs.google.com/presentation/d/1z3r5GIgWKBkDNXW7TVrA5gCQMLwLylxGcVlUrhg8k0M/edit?usp=drive_web&ouid=109922422742355126005), [recording](https://youtu.be/SIJ3YumuxBs), [seminar](./week04/seminar_notebook.ipynb), **[HW](./week04/HW.md)** |
 | 5 | 09.10 | Speech Recognition: Streaming, RNN-T, LAS | [slides](https://docs.google.com/presentation/d/1R-ynTzomYmGzHbnk-oHNcanqEizryrXTnksI9IobZ0E), [recording](https://youtu.be/OpplQTEbHV0), [seminar](./week05/conformer_las.ipynb) |
-| 6 | 16.10 | SSL & System Combination | [slides](https://docs.google.com/presentation/d/1gFQ1-p27irwMSN0Qov_cZ5hREGNl2Mdach_KwdkwhXE/edit?usp=sharing), [recording](https://youtu.be/K-9CCv8dBeU), [HW](./week06/asr_ensemble.ipynb) |
+| 6 | 16.10 | SSL & System Combination | [slides](https://docs.google.com/presentation/d/1gFQ1-p27irwMSN0Qov_cZ5hREGNl2Mdach_KwdkwhXE/edit?usp=sharing), [recording](https://youtu.be/K-9CCv8dBeU), **[HW](./week06/asr_ensemble.ipynb)** |
+| 7 | 16.10 | SSL & System Combination | [slides](./week07/l8_asr_semi_supervised.pdf), [recording](https://youtu.be/K-9CCv8dBeU), **[HW](https://colab.research.google.com/drive/19DXSYuoD8v3ocE_NZKPpuqBqZqYHuOu9?usp=sharing)** |
 
 
 ## Previous versions
