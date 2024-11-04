@@ -11,6 +11,8 @@ MIPT, autumn 2024
 | 5 | 09.10 | Speech Recognition: Streaming, RNN-T, LAS | [slides](https://docs.google.com/presentation/d/1R-ynTzomYmGzHbnk-oHNcanqEizryrXTnksI9IobZ0E), [recording](https://youtu.be/OpplQTEbHV0), [seminar](./week05/conformer_las.ipynb) |
 | 6 | 16.10 | SSL & System Combination | [slides](https://docs.google.com/presentation/d/1gFQ1-p27irwMSN0Qov_cZ5hREGNl2Mdach_KwdkwhXE/edit?usp=sharing), [recording](https://youtu.be/K-9CCv8dBeU), **[HW](./week06/asr_ensemble.ipynb)** |
 | 7 | 23.10 | Speech Recognition: Semi-Supervised Learning, mWER | [slides](./week07/l7_asr_semi_supervised.pdf), [recording](https://www.youtube.com/watch?v=Xv_s72oSku8), **[HW](https://colab.research.google.com/drive/19DXSYuoD8v3ocE_NZKPpuqBqZqYHuOu9?usp=sharing)** |
+| 8 | 30.10 | Speech Recognition: Data | [slides](https://docs.google.com/presentation/d/1iKU0xCRzHnx1fBxTb1DWib-NN0P7pF6rlE0MgsoSZ9I), [recording](https://youtu.be/N_UASNT4V-4) |
+
 
 
 ## Previous versions
