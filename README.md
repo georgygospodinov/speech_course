@@ -13,7 +13,8 @@ MIPT, autumn 2024
 | 7 | 23.10 | Speech Recognition: Semi-Supervised Learning, mWER | [slides](./week07/l7_asr_semi_supervised.pdf), [recording](https://www.youtube.com/watch?v=Xv_s72oSku8), **[HW](https://colab.research.google.com/drive/19DXSYuoD8v3ocE_NZKPpuqBqZqYHuOu9?usp=sharing)** |
 | 8 | 30.10 | Speech Recognition: Data | [slides](https://docs.google.com/presentation/d/1iKU0xCRzHnx1fBxTb1DWib-NN0P7pF6rlE0MgsoSZ9I), [recording](https://youtu.be/N_UASNT4V-4) |
 | 9 | 06.11 | Speaker Recognition | [slides](https://docs.google.com/presentation/d/1xMr1tUD0qNq-6A6-1MQvQNa3d08t95fzG20DUBh8Ruo), [recording](https://youtu.be/V2N4SY4eXS0), [seminar](./week09/visualize.ipynb) |
-| 10 | 13.11 | Voice Activity Detection, Speaker Diarization | [slides](https://docs.google.com/presentation/d/1e_i4_5RT4BlTilVfnwFPGjFa2kHxesaSW7kXHx67Mtk), [recording](https://youtu.be/V38kQQwH-dQ), [seminar](./week10/pyannote_diarization_seminar.ipynb)
+| 10 | 13.11 | Voice Activity Detection, Speaker Diarization | [slides](https://docs.google.com/presentation/d/1e_i4_5RT4BlTilVfnwFPGjFa2kHxesaSW7kXHx67Mtk), [recording](https://youtu.be/V38kQQwH-dQ), [seminar](./week10/pyannote_diarization_seminar.ipynb) |
+| 11 | 20.11 | Text To Speech: Introduction | [slides](./week11/tts_intro_metrics.pdf), [recording](https://youtu.be/z6SPvCi-J7A), [seminar](./week11/seminar.ipynb) |
 
 ## Previous versions
 * [2023](https://github.com/georgygospodinov/speech_course/tree/2023)
