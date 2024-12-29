@@ -15,6 +15,9 @@ MIPT, autumn 2024
 | 9 | 06.11 | Speaker Recognition | [slides](https://docs.google.com/presentation/d/1xMr1tUD0qNq-6A6-1MQvQNa3d08t95fzG20DUBh8Ruo), [recording](https://youtu.be/V2N4SY4eXS0), [seminar](./week09/visualize.ipynb) |
 | 10 | 13.11 | Voice Activity Detection, Speaker Diarization | [slides](https://docs.google.com/presentation/d/1e_i4_5RT4BlTilVfnwFPGjFa2kHxesaSW7kXHx67Mtk), [recording](https://youtu.be/V38kQQwH-dQ), [seminar](./week10/pyannote_diarization_seminar.ipynb) |
 | 11 | 20.11 | Text To Speech: Introduction | [slides](./week11/tts_intro_metrics.pdf), [recording](https://youtu.be/z6SPvCi-J7A), [seminar](./week11/seminar.ipynb) |
+| 12 | 27.11 | Text To Speech: Acoustic Models, Tacotron2 | [slides](./week12/tts_am_taco.pdf), [recording](https://youtu.be/OMSm9pZdNzE), [seminar](./week12/seminar.ipynb) |
+| 13 | 04.12 | Text To Speech: Vocoders | [slides](./week13/tts_vocoders.pdf), [recording](https://youtu.be/yxJVMCE7tHg), **[HW](./week13/HW.md)** |
+| 14 | 11.12 | Audio Large Language Models | [slides](https://docs.google.com/presentation/d/1C0WOJsHMWsUk8rjQfGDKAPG0iOsYb2Vhy6zqn2CSz_U), [recording](https://youtu.be/fTczeiWK3NM) |
 
 ## Previous versions
 * [2023](https://github.com/georgygospodinov/speech_course/tree/2023)
