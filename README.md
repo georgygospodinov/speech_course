@@ -10,7 +10,8 @@ MIPT, autumn 2025
 | 4 | 01.10 | Speech Recognition: CTC, Beam Search, Rescoring | [slides](https://docs.google.com/presentation/d/1RDpUIu2EaheE_MmKNUb8m65FocFiFhSjgTa_EfxREHE), [recording](https://youtu.be/2shAMBK4ASY) |
 | 5 | 08.10 | Speech Recognition: Encoder-Decoder, Streaming, RNN-T, Decoder-only | [slides](https://docs.google.com/presentation/d/1ZAepHIe7ME8Vh9PKcVt8-0XLsezjOre-0_rJdPChZa0), [recording](https://youtu.be/_ouCYN4y4fk), [seminar](https://colab.research.google.com/drive/1t0R7uAttkXFytv4CkFHMfaja7SHY9GNy?usp=sharing#scrollTo=WJFBF2caa_PB), **[HW](./week05/README.md)** |
 | 6 | 15.10 | Self-Supervised Learning: wav2vec2.0, HuBERT, BEST-RQ, GigaAM | [slides](https://docs.google.com/presentation/d/16CyQ7_qoN_vYhDPoO8lbkNZsMf-zaCIjJP3EvXqdois), [recording](https://youtu.be/_MFJ-EAuSZI) |
-| 7 | 22.10 | Speech Recognition: Semi-Supervised Learning, Data | [slides](https://docs.google.com/presentation/d/1uRfIOfiwu4XKUnIEhdYhbYTlqKVm6jj1WZHlQctMfEw/edit?slide=id.g38631e327a6_1_0), [recording](https://youtu.be/p54HHhDSmm8), [seminer](https://colab.research.google.com/github/georgygospodinov/speech_course/blob/main/week07/seminar.ipynb) |
+| 7 | 22.10 | Speech Recognition: Semi-Supervised Learning, Data | [slides](https://docs.google.com/presentation/d/1uRfIOfiwu4XKUnIEhdYhbYTlqKVm6jj1WZHlQctMfEw/edit?slide=id.g38631e327a6_1_0), [recording](https://youtu.be/p54HHhDSmm8), [seminar](https://colab.research.google.com/github/georgygospodinov/speech_course/blob/main/week07/seminar.ipynb) |
+| 8 | 29.10 | Speaker Recognition | [slides](https://docs.google.com/presentation/d/1NM7VWeVGk_25aCQ2XGKQHag8HpBNVTPD7BNFo0OsfM4), [recording](https://youtu.be/WsspMkXG6Ys), [seminar](./week08/visualize.ipynb), **[HW](./week08/README.md)** |
 
 ## Previous versions
 * [2024](https://github.com/georgygospodinov/speech_course/tree/2024)
