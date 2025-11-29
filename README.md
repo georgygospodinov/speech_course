@@ -12,6 +12,8 @@ MIPT, autumn 2025
 | 6 | 15.10 | Self-Supervised Learning: wav2vec2.0, HuBERT, BEST-RQ, GigaAM | [slides](https://docs.google.com/presentation/d/16CyQ7_qoN_vYhDPoO8lbkNZsMf-zaCIjJP3EvXqdois), [recording](https://youtu.be/_MFJ-EAuSZI) |
 | 7 | 22.10 | Speech Recognition: Semi-Supervised Learning, Data | [slides](https://docs.google.com/presentation/d/1uRfIOfiwu4XKUnIEhdYhbYTlqKVm6jj1WZHlQctMfEw/edit?slide=id.g38631e327a6_1_0), [recording](https://youtu.be/p54HHhDSmm8), [seminar](https://colab.research.google.com/github/georgygospodinov/speech_course/blob/main/week07/seminar.ipynb) |
 | 8 | 29.10 | Speaker Recognition | [slides](https://docs.google.com/presentation/d/1NM7VWeVGk_25aCQ2XGKQHag8HpBNVTPD7BNFo0OsfM4), [recording](https://youtu.be/WsspMkXG6Ys), [seminar](./week08/visualize.ipynb), **[HW](./week08/README.md)** |
+| 10 | 12.11 | Audio-Conditioned LLMs | [slides](https://docs.google.com/presentation/d/1kTkS9tHV6RUWlqP7LMmfRVZfn0-cfGcF-yy5iG0eJnw/), [recording](https://www.youtube.com/watch?v=VNg9bmF9bK0&t=11s), [seminar](./week10/audiollm-seminar.ipynb), **[HW](./week10/audiollm-hw.ipynb)** |
+
 
 ## Previous versions
 * [2024](https://github.com/georgygospodinov/speech_course/tree/2024)
