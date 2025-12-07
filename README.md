@@ -14,6 +14,9 @@ MIPT, autumn 2025
 | 8 | 29.10 | Speaker Recognition | [slides](https://docs.google.com/presentation/d/1NM7VWeVGk_25aCQ2XGKQHag8HpBNVTPD7BNFo0OsfM4), [recording](https://youtu.be/WsspMkXG6Ys), [seminar](./week08/visualize.ipynb), **[HW](./week08/README.md)** |
 | 9 | 05.11 | Voice Activity Detection, Speaker Diarization, Speaker-attributed ASR | [slides](https://docs.google.com/presentation/d/1-ZRfxRXtpGYzzkaYEYIuM_O-_c_9K3Wc1vqHqvtmvq0), [recording](https://youtu.be/jUOGia7f6Y8), [seminar](./week09/pyannote_diarization_seminar.ipynb) |
 | 10 | 12.11 | Audio-Conditioned LLMs | [slides](https://docs.google.com/presentation/d/1kTkS9tHV6RUWlqP7LMmfRVZfn0-cfGcF-yy5iG0eJnw/), [recording](https://www.youtube.com/watch?v=VNg9bmF9bK0&t=11s), [seminar](./week10/audiollm-seminar.ipynb), **[HW](./week10/audiollm-hw.ipynb)** |
+| 11 | 19.11 | Text-to-Speech: Conventional Models | [slides](./week11/tts_intro.pdf), [recording](https://youtu.be/K8Vwo7EESsM) |
+| 12 | 26.11 | Text-to-Speech: Codecs, Vocoders | [slides](https://docs.google.com/presentation/d/1f1ndayUbbz6xsElIMnyTEuID89W1xEVS6eXejr7X_YY), [seminar](https://colab.research.google.com/drive/1K3wH5LAREuHKBo3LX1lVkrEfEEtRG_zs) |
+| 13 | 03.12 | Text-to-Speech
 
 
 ## Previous versions
