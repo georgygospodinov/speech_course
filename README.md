@@ -17,6 +17,7 @@ MIPT, autumn 2025
 | 11 | 19.11 | Text-to-Speech: Conventional Models | [slides](./week11/tts_intro.pdf), [recording](https://youtu.be/K8Vwo7EESsM) |
 | 12 | 26.11 | Text-to-Speech: Codecs, Vocoders | [slides](https://docs.google.com/presentation/d/1f1ndayUbbz6xsElIMnyTEuID89W1xEVS6eXejr7X_YY), [seminar](https://colab.research.google.com/drive/1K3wH5LAREuHKBo3LX1lVkrEfEEtRG_zs) |
 | 13 | 03.12 | Text-to-Speech: Recent Advancements | [slides](./week13/tts_recent_advancements.pdf), [recording](https://youtu.be/yqCB3bVXIlg), **[HW](./week13/README.md)** |
+| 14 | 17.12 | Speech-to-Speech LLMs | [slides](https://docs.google.com/presentation/d/1T3OHOw880vgbhe_p_FxQ3Jt5DLuVBdFtQFpDdfCyz2U), [recording](https://youtu.be/O0QAvmAwtLI) |
 
 ## Previous versions
 * [2024](https://github.com/georgygospodinov/speech_course/tree/2024)
