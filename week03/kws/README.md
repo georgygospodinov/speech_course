@@ -22,5 +22,5 @@ python to_onnx.py ++init_weights=<path_to_model>
 # visualize graph with netron
 netron ./data/kws.onnx
 # form submit for Kaggle
-python submit.py ++init_weights=<path_to_model>
+python submit.py ++init_weights=<path_to_model> ++train_dataloader.dataset.manifest_path=<train_manifest> ++val_dataloader.dataset.manifest_path=<val_manifest> ++predict_dataloader.dataset.manifest_path=<test_manifest>
 ```

@@ -29,7 +29,7 @@ def main(conf: omegaconf.DictConfig) -> None:
 
     buffer_size = int(cfg.window_size_seconds / cfg.window_shift_seconds)
 
-    spec_frames: Deque[torch.Tensor] = collections.deque(maxlen=buffer_size)
+    audio_frames: Deque[torch.Tensor] = collections.deque(maxlen=buffer_size)
 
     last_probs = collections.deque(
         [
@@ -52,12 +52,11 @@ def main(conf: omegaconf.DictConfig) -> None:
             byte_audio_frame = record_audio(
                 stream, duration_seconds=cfg.window_shift_seconds
             )
-            spec_frames.append(
-                feature_extractor(audio_bytes_to_tensor(byte_audio_frame))
-            )
+            audio_frames.append(audio_bytes_to_tensor(byte_audio_frame))
 
-            if len(spec_frames) == buffer_size:
-                spectrogram = torch.cat(list(spec_frames), dim=2).numpy()
+            if len(audio_frames) == buffer_size:
+                waveform = torch.cat(list(audio_frames), dim=1)
+                spectrogram = feature_extractor(waveform).numpy()
                 logprobs: List[np.ndarray] = model.run(
                     ["logprobs"], {"features": spectrogram}
                 )
