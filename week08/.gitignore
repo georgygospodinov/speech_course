@@ -1,0 +1,13 @@
+.venv/
+data/
+# Share only the two best model checkpoints.
+checkpoints/**
+!checkpoints/*/
+!checkpoints/*/best.ckpt
+logs/
+training_summary.json
+figures/
+.jupyter/
+.ipython/
+.cache/
+*.log
